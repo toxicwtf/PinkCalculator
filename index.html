@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/Android/icons8-calculator-256(-xxxhdpi).png">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="mother">
+        <div class="card">
+            <div>
+                <input type="text" readonly id="display">
+            </div>
+            <div class="items">
+                <table>
+                    <tr>
+                        <td><button class="btn-operator" id="Radikal" onclick="operator_clicked('R')">R</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-operator" id="clear" onclick="Delete('C')">C</button></td>
+                        <td><button class="btn-operator" id="backspace" onclick="Delete('backspace')">B</button></td>
+                        <td><button class="btn-operator" id="/" onclick="operator_clicked('/')">&divide;</button></td>
+                        <td><button class="btn-operator" id="*" onclick="operator_clicked('*')">&times;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-num" onclick="numberClicked(7)">7</button></td>
+                        <td><button class="btn-num" onclick="numberClicked(8)">8</button></td>
+                        <td><button class="btn-num" onclick="numberClicked(9)">9</button></td>
+                        <td><button class="btn-operator" id="+" onclick="operator_clicked('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-num" onclick="numberClicked(4)">4</button></td>
+                        <td><button class="btn-num" onclick="numberClicked(5)">5</button></td>
+                        <td><button class="btn-num" onclick="numberClicked(6)">6</button></td>
+                        <td><button class="btn-operator" id="-" onclick="operator_clicked('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-num" onclick="numberClicked(1)">1</button></td>
+                        <td><button class="btn-num" onclick="numberClicked(2)">2</button></td>
+                        <td><button class="btn-num" onclick="numberClicked(3)">3</button></td>
+                        <td><button class="btn-operator" id="%" onclick="operator_clicked('%')">%</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-num" onclick="numberClicked(0)" id="zero">0</button></td>
+                        <td><button class="btn-operator" onclick="numberClicked('.')">.</button></td>
+                        <td><button class="btn-operator" onclick="operator_clicked('**')">**</button></td>
+                        <td><button class="btn-operator" id="equal" onclick="equal_clicked(true)">=</button></td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
